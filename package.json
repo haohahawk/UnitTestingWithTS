@@ -8,7 +8,7 @@
     "dev": "nodemon",
     "start": "node ./dist/server.js",
     "prod": "npm run build && npm start",
-    "test": "jest --watch"
+    "test": "jest --watchAll --coverage"
   },
   "repository": {
     "type": "git",
@@ -22,14 +22,14 @@
   "homepage": "https://github.com/haohahawk/UnitTestingWithTS#readme",
   "dependencies": {},
   "devDependencies": {
-    "@types/jest": "^23.3.9",
-    "@types/node": "^10.12.8",
-    "jest": "^23.6.0",
-    "nodemon": "^1.18.6",
-    "ts-jest": "^23.10.4",
-    "ts-node": "^7.0.1",
-    "tslint": "^5.11.0",
-    "typescript": "^3.1.6"
+    "@types/jest": "^24.0.15",
+    "@types/node": "^12.6.8",
+    "jest": "^24.8.0",
+    "nodemon": "^1.19.1",
+    "ts-jest": "^24.0.2",
+    "ts-node": "^8.3.0",
+    "tslint": "^5.18.0",
+    "typescript": "^3.5.3"
   },
   "nodemonConfig": {
     "watch": [
