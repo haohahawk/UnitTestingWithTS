@@ -13,7 +13,7 @@ export class LogAnalyzer {
         this.email.sendEmail({  // 3.最後再回來修改產品碼到綠燈
           to: 'someone@somewhere.com',
           subject: 'can not log',
-          body: e.errorMessage
+          body: (e as Error).message
         });
       }
     }

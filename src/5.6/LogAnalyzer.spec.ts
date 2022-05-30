@@ -25,7 +25,7 @@ describe('LogAnalyze', () => {
       // 確認 web 服務的模擬物件有被正確呼叫，
       // 而且傳入的字串參數包含了 fake exception 的內容
       expect((mockWebService.write as jest.Mock<{}>).mock.calls[0][0])
-        .toMatch(/fake expection/);
+        .toContain('fake exception');
     });
   });
 });

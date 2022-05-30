@@ -10,7 +10,7 @@ export class LogAnalyzer {
       try {
         this.service.logError('Filename too short: ' + fileName);
       } catch (e) {
-        this.email.sendEmail('someone@somewhere.com', 'can not log', e.errorMessage);
+        this.email.sendEmail('someone@somewhere.com', 'can not log', (e as Error).message);
       }
     }
   }

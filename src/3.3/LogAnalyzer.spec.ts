@@ -5,7 +5,7 @@ describe('LogAnalyzer', () => {
     test('return true, when supported extension.', () => {
       const log = new LogAnalyzer();
       const isValid = log.isValidLogFileName('short.ext');
-      expect(isValid).toBeTruthy();
+      expect(isValid).toBeTruthy(); // 會報錯，因尚未實裝 AlwayVaildFakeFileExtensionManager
     });
   });
 });
