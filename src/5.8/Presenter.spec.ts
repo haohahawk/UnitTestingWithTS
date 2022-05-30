@@ -4,11 +4,11 @@ describe('Presenter', () => {
   describe('created', () => {
     test('call View.render(), when View is loaded', () => {
       const fakeView: View = new View();
-      const MockView: jest.Mock<View> = jest.fn<View>(() => ({
+      const MockView: jest.Mock<View> = jest.fn<View, []>(() => ({
         loaded: jest.fn(fakeView.loaded),
         render: jest.fn(fakeView.render),
         dispatch: jest.fn(fakeView.dispatch)
-      }));
+      } as unknown as View));
       const mockView = new MockView();
 
       const presenter = new Presenter(mockView);
