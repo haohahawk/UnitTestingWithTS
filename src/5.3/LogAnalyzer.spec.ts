@@ -1,7 +1,7 @@
 import { Logger, LogAnalyzer } from './LogAnalyzer';
 
 describe('LogAnlyzer', () => {
-  const MockLogger = jest.fn<Logger>(() => ({
+  const MockLogger = jest.fn<Logger, []>(() => ({
     logError: jest.fn()
   }));
 

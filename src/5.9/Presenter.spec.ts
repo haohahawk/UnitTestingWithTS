@@ -4,12 +4,12 @@ describe('Presenter', () => {
   describe('created', () => {
     test('call View.render(), when View is loaded', () => {
       const fakeView: View = new View();
-      const MockView: jest.Mock<View> = jest.fn<View>(() => ({
+      const MockView: jest.Mock<View> = jest.fn<View, []>(() => ({
         errorOccured: jest.fn(fakeView.errorOccured),
         dispatchErrorOccured: jest.fn(fakeView.dispatchErrorOccured)
-      }));
+      } as unknown as View));
       const mockView = new MockView();
-      const MockLogger: jest.Mock<Logger> = jest.fn<Logger>(() => ({
+      const MockLogger: jest.Mock<Logger> = jest.fn<Logger, []>(() => ({
         logError: jest.fn()
       }));
       const mockLogger = new MockLogger();
